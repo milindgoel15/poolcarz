@@ -1,0 +1,17 @@
+.container-fluid {
+	position: relative; 
+	top: 11.25rem;
+
+	@media (min-width: 992px) {	
+		.form-box {
+			margin-left: 20%;
+		}
+		.form-control {
+			width: 75%;
+		}
+
+		.failurebutton {
+			
+		}
+	}
+}

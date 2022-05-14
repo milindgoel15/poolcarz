@@ -1,0 +1,28 @@
+<div class="container container-fluid" *ngIf="!submitted">
+	<form class="form-box">
+		<div class="mb-3">
+			<label class="form-label">User Name</label>
+			<input class="form-control" aria-describedby="emailHelp" type="text" [(ngModel)]="login.username" />
+			<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+		</div>
+		<div class="mb-3">
+			<label for="password" class="form-label">Password</label>
+			<input class="form-control" type="password" name="password" [(ngModel)]="login.password" />
+		</div>
+		<button class="btn btn-primary" (click)="onSubmit()">Login</button>
+	</form>
+</div>
+<div class="container container-fluid" *ngIf="submitted">
+	<form class="d-flex flex-column justify-content-center align-items-center">
+		<!-- <div *ngIf="isAuthenticated; else failureMsg">
+			<h4 class="text-center">Welcome {{ login.username }}</h4>
+		</div> -->
+		<ng-template #failureMsg>
+			<h4 class="text-center">Invalid Login!! Please try again...</h4>
+		</ng-template>
+		<div>
+
+			<button class="btn btn-primary mt-3 mx-2" type="button" (click)="submitted = false">Back</button>
+		</div>
+	</form>
+</div>

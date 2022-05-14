@@ -1,0 +1,6 @@
+<div>
+    <p [style.background-color]="background" [style.color]="color" >styles works!</p>
+
+
+    <p [ngStyle]="{color: color, background: background}" [ngClass]="{bordered: isBordered}">styles works! {{ isBordered ? "ON" : "OFF" }}</p>
+</div>

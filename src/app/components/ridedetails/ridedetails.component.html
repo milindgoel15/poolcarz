@@ -1,0 +1,25 @@
+<div class="tableContent align-items-center justify-content-center">
+    <h3 class="text-center align-items-center">Please select a ride!</h3>
+    <table class="table border rounded" *ngIf="rideOptions">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Car</th>
+                <th>Seats Left</th>
+                <th>Start Point</th>
+                <th>End Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let selected of rideOptions">
+                <td> {{ selected.id }} </td>
+                <td> {{ selected.name }} </td>
+                <td> {{ selected.car }} </td>
+                <td> {{ selected.seatsAvail }} </td>
+                <td> {{ selected.startPoint }} </td>
+                <td> {{ selected.endPoint }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

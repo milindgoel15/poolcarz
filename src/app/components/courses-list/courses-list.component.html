@@ -1,0 +1,15 @@
+<table *ngIf="course">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of course">
+            <td>{{c.courseId}}</td>
+            <td>{{c.courseName}}</td>
+            <td><button class="btn btn-primary" (click)="register(c.courseName)">Register</button></td>
+        </tr>
+    </tbody>
+</table>

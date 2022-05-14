@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center welcome-styles">
+        <div class="text-center align-items-center">
+            <h2 class="p-2">
+                Welcome to {{ title }}
+            </h2>
+
+            <p class="p-2">
+                An online application which enables users to share rides with others.
+            </p>
+
+            <div class="p-3">
+                <button class="btn btn-primary px-3 py-2 mx-2" (click)="router.navigate(['../login'])">Login here</button>
+                <button class="btn btn-primary px-3 py-2 mx-2" (click)="router.navigate(['../book-ride'])">Book a Ride</button>
+            </div>
+        </div>
+    </div>
+</div>
